@@ -6,3 +6,14 @@ model achieved state-of-the-art performance on MS-CXR with an mIoU of 61.2, demo
 
 ## Description
 This repository provides the code necessary to load the MDETR and TransVG models, which are pre-trained on the ChestImagenome anatomy grounding dataset and subsequently fine-tuned on the MS-CXR medical phrase grounding dataset. The demo folder includes four example Chest X-ray images from the MS-CXR dataset. The demo.py script supplies descriptive phrases along with their corresponding bounding box annotations for each image. Additionally, the repository offers visualizations that display the model's predictions, highlighting the annotated bounding boxes on the sample Chest X-ray images.
+
+## Model weights
+The fine-tuned model weights for TransVG-AGPT and MDETR-AGPT on the MS-CXR dataset are available for download. Google Drive Link:https://drive.google.com/drive/folders/1lFaqAlG6AJExCjkW3Pbb24CX-LWSstrK?usp=sharing.
+Save them in:
+agpt/model_weight/transvg.pth
+agpt/model_weight/mdetr.pth
+
+
+
+
+
