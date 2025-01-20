@@ -15,7 +15,7 @@ agpt/model_weight/mdetr.pth
 
 ## Demonstration
 
-```python
+```shell
 python demo.py
 ```
 
