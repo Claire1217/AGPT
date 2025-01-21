@@ -49,7 +49,7 @@ def save_plot(args, img_fn, pred_box, gt_box, save_dir):
 
 def inference(model_name):
     save_dir = os.path.join('demo/outputs', model_name)
-    os.makedirs(save_dir, exist_ok=True)  
+    os.makedirs(save_dir, exist_ok=True)
     # Load model
     if model_name == 'transvg':
         args = build_args('transvg', 'ms_cxr')
@@ -61,6 +61,8 @@ def inference(model_name):
         model = build_mdetr_model(args)
         mdetr_ckp = torch.load('model_weight/mdetr.pth', map_location='cpu')
         model.load_state_dict(mdetr_ckp['model'], strict=False)
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    args.device = device
     model = model.to(args.device)
     # Save plots
     model.eval()
