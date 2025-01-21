@@ -15,7 +15,7 @@ agpt/model_weight/mdetr.pth
 
 
 ## Demonstration
-We recommend using Python 3.10 for running the demonstration. Install the required packages using:
+We strongly recommend using Python 3.10 to run this demonstration, as other versions may cause conflicts between packages. After Python 3.10 is installed on your system, you can then install the required packages using:
 ```shell
 pip install -r requirements.txt
 ```
