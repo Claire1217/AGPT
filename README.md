@@ -13,13 +13,6 @@ Save them in:
 agpt/model_weight/transvg.pth
 agpt/model_weight/mdetr.pth
 
-## Demonstration
-Python 3.10 is recommended
-Install packages by pip install -r requirements.txt
-```shell
-python demo.py
-```
-
 
 ## Demonstration
 We recommend using Python 3.10 for running the demonstration. Install the required packages using:
