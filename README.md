@@ -13,6 +13,11 @@ Save them in:
 agpt/model_weight/transvg.pth
 agpt/model_weight/mdetr.pth
 
+## Demonstration
+
+```shell
+python demo.py
+```
 
 
 
