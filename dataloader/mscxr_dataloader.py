@@ -129,13 +129,14 @@ def get_transforms(args, split, with_bboxes=True):
             A.GaussNoise(),
             A.Affine(mode=cv2.BORDER_CONSTANT, cval=0, translate_percent=(-0.02, 0.02), rotate=(-2, 2)),
             A.RandomCrop(height=args.imsize - 5, width=args.imsize - 5, always_apply=False, p=0.5),
-            A.PadIfNeeded(min_height=args.imsize, min_width=args.imsize, border_mode=cv2.BORDER_CONSTANT, value=0),
+            A.PadIfNeeded(min_height=args.imsize, min_width=args.imsize, border_mode=cv2.BORDER_CONSTANT),
             A.Normalize(mean=mean, std=std),
             ToTensorV2(),]
     else:
         transforms = [
             A.LongestMaxSize(max_size=args.imsize),
-            A.PadIfNeeded(min_height=args.imsize, min_width=args.imsize, border_mode=cv2.BORDER_CONSTANT, value=0),
+            A.PadIfNeeded(min_height=args.imsize, min_width=args.imsize, border_mode=cv2.BORDER_CONSTANT
+                          ),
             A.Normalize(mean=mean, std=std),
             ToTensorV2(),
         ]
