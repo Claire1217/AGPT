@@ -13,12 +13,14 @@ Save them in:
 agpt/model_weight/transvg.pth
 agpt/model_weight/mdetr.pth
 
-## Demonstration
 
+## Demonstration
+We recommend using Python 3.10 for running the demonstration. Install the required packages using:
+```shell
+pip install -r requirements.txt
+```
+To run the demonstration, execute:
 ```shell
 python demo.py
 ```
-
-
-
-
+This script loads the trained MDETR and TransVG models to perform predictions on four example images located in the demo/ directory, with their corresponding phrases and bounding boxes defined within demo.py. The results will be visualized and saved in demo/outputs/mdetr and demo/outputs/transvg directories. In the visualizations, ground truth bounding boxes are displayed in red and predicted bounding boxes in blue.
